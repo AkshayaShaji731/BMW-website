@@ -40,6 +40,8 @@ burgerBtn.addEventListener("click",()=>{
 function menuAdd(){
     logoLink.style.opacity="0"
     headerSlogan.style.opacity="1"
+    headerSlogan.style.transform=" translateY(-50%) translateX(0)"
+    nav.style.display="block"
     burgerBtn.innerHTML=`<svg class="pw-m-header__icon pw-m-header__icon-close" style="display: block;"><use xlink:href="#icon-close"></use></svg>` 
     burgerBtn.addEventListener("click",()=>{
         menuClose()
@@ -48,6 +50,7 @@ function menuAdd(){
 function menuClose(){
     logoLink.style.opacity="1"
     headerSlogan.style.opacity="0"
+    nav.style.display="none"
     burgerBtn.innerHTML=`
     <svg class="pw-m-header__icon pw-m-header__icon-menu" style="display: block;"><use xlink:href="#icon-burger-menu"></use></svg>`
     burgerBtn.addEventListener("click",()=>{
@@ -73,7 +76,7 @@ navItem.innerHTML=`
 const navItemUl=document.getElementById("nav-ul")
 createNav()
 function createNav(){
-    let ItemName=["Home","Circular World","Digital Jounery","Electric Future","Freude","Models"]
+    let ItemName=["Home","Circular World","Digital Journey","Electric Future","Freude","Models"]
     let ItemLink=["index.html","index.html","index.html","index.html","index.html","index.html",]
     for (let i=0;i<ItemName.length;i++){
        let li=document.createElement("li")
