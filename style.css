@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #262626;
+    font-family: BMWTypeNextLatin, Helvetica, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, Meiryo, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+header{
+    display: block;
+    margin-top: 1pc;
+    position: fixed;
+    top: 10;
+    width: 100%;
+    z-index: 10000;
+}
+.header-container{
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, .1);
+    color: #262626;
+    margin: 0 auto;
+    padding: 1pc 30px;
+    max-width: 1600px;
+}
+.head-inner-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-logo-wrapper{
+    position: relative;
+    display: flex;
+    height: 3pc;
+    max-width: 300px;
+    align-items: center;
+}
+.logo-link{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    cursor: pointer;
+}
+.logo-link img{
+    display: block;
+    height: 3pc;
+    width: auto;
+    aspect-ratio: auto 100 / 100;
+}
+.header-slogan{
+    display:block;
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    transform: translateY(-50%) translateX(20px);
+    white-space: nowrap;
+    font-size: 1pc;
+    line-height: 26px;
+}
+.header-slogan p{
+    margin-bottom: 0;
+    /* margin: 0 0 25px; */
+}
+.header-slogan p strong{
+    font-family: BMWTypeNextLatin,Helvetica,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-weight: 700;
+}
+.header-burger-menu{
+    display: flex;
+    justify-content: center;
+    min-height: 3pc;
+    min-width: 3pc;
+    cursor: pointer;
+    border: none;
+    background:none;
+    align-items: center;
+    outline: none;
+    color: currentColor;
+}
+.header-burger-menu svg{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    color: #262626;
+    line-height: 1.15;
+    font-size: 100%;
+
+}
