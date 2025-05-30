@@ -13,7 +13,7 @@ header{
     display: block;
     margin-top: 1pc;
     position: fixed;
-    top: 10;
+    top: 0;
     width: 100%;
     z-index: 10000;
 }
@@ -25,12 +25,15 @@ header{
     margin: 0 auto;
     padding: 1pc 30px;
     max-width: 1600px;
-}
-.head-inner-con{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+/* .head-inner-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
 .header-logo-wrapper{
     position: relative;
     display: flex;
