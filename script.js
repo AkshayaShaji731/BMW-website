@@ -38,7 +38,12 @@ burgerBtn.addEventListener("click",()=>{
     menuAdd();
 })    
 function menuAdd(){
-    logoLink.style.opacity="0"
+    if(window.matchMedia("(min-width:768px)").matches){
+        logoLink.style.opacity="1"
+    }
+    else{
+        logoLink.style.opacity="0"
+    }
     headerSlogan.style.opacity="1"
     headerSlogan.style.transform=" translateY(-50%) translateX(0)"
     nav.style.display="block"
@@ -49,7 +54,13 @@ function menuAdd(){
 }
 function menuClose(){
     logoLink.style.opacity="1"
-    headerSlogan.style.opacity="0"
+    // headerSlogan.style.opacity="0"
+    if(window.matchMedia("(min-width:768px)").matches){
+        headerSlogan.style.opacity="1"
+    }
+    else{
+        headerSlogan.style.opacity="0"
+    }
     nav.style.display="none"
     burgerBtn.innerHTML=`
     <svg class="pw-m-header__icon pw-m-header__icon-menu" style="display: block;"><use xlink:href="#icon-burger-menu"></use></svg>`
