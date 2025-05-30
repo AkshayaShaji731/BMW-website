@@ -82,4 +82,13 @@ function createNav(){
         navItemUl.appendChild(li)
     }
 }
+searchCon.innerHTML=`
+<form id="search-form"></form>`
+
+const searchForm=document.getElementById("search-form")
+  
+searchForm.innerHTML=`
+ <input type="text" placeholder="Search" id="search-input">
+ <button class="search-btn"><svg class="pw-m-header__icon icon-search"><use xlink:href="#icon-search"></use></svg></button>
+ `
 

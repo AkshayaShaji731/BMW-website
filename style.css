@@ -1,3 +1,44 @@
+@font-face {
+    font-display: swap;
+    font-family: BMWTypeNextLatin;
+    font-style: normal;
+    font-weight: 400;
+    src:url(/font/BMWTypeNextLatin.woff2)
+}
+
+@font-face {
+    font-display: swap;
+    font-family: BMWTypeNextLatin Light;
+    font-style: normal;
+    font-weight: 300;
+    src:url(/font/BMWTypeNextLatin-Light.woff2)
+}
+
+@font-face {
+    font-display: swap;
+    font-family: epaasLinkFont;
+    font-style: normal;
+    font-weight: 700;
+    src: local("BMWTypeNextLatin"),url(clientlib-site/resources/fonts/BMWTypeNextLatin.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: epaasTextFont;
+    font-style: normal;
+    font-weight: 400;
+    src: local("BMWTypeNextLatin"),url(clientlib-site/resources/fonts/BMWTypeNextLatin.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Playfair Display"),local("PlayfairDisplay"),url(clientlib-site/resources/fonts/playfair.woff2) format("woff2");
+    unicode-range: U+00??,U+0131,U+0152-0153,U+02c6,U+02da,U+02dc,U+2000-206f,U+2074,U+20ac,U+2212,U+2215
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +46,7 @@
 }
 body{
     color: #262626;
-    font-family: BMWTypeNextLatin, Helvetica, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, Meiryo, sans-serif;
+    font-family: BMWTypeNextLatin;
     font-weight: 400;
     margin: 0;
 }
@@ -71,7 +112,7 @@ header{
     /* margin: 0 0 25px; */
 }
 .header-slogan p strong{
-    font-family: BMWTypeNextLatin,Helvetica,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-family: BMWTypeNextLatin;
     font-weight: 700;
 }
 .header-burger-menu{
@@ -150,4 +191,43 @@ header{
     order: -1;
     padding: 1rem 0;
     width: 100%;
+}
+#search-form{
+    display:flex;
+    gap: 4px;
+    width: 100%;
+}
+#search-input{
+    display: block;
+    flex-grow: 1;
+    height: 50px;
+    padding: 0 24px;
+    position: relative;
+    outline: none;
+    z-index: 1;
+    border: none;
+    background-color: #f8f8f8;
+    font-size: 100%;
+    line-height: 1.15;
+    font-family: BMWTypeNextLatin;
+}
+.search-btn{
+    background-color: #f8f8f8;
+    border: 2px solid transparent;
+    color: #262626;
+    height: 50px;
+    min-width: 50px;
+    padding: 0 9pt;
+    position: relative;
+    z-index: 0;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.search-btn svg{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    color: #262626;
 }
