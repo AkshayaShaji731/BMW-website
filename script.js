@@ -1,5 +1,8 @@
 const root = document.getElementById("root")
 const header = document.getElementById("header")
+const main=document.getElementById("main")
+
+// header section
 
 header.innerHTML = `
 <div class="header-container"></div>`
@@ -105,4 +108,25 @@ searchForm.innerHTML=`
  <input type="text" placeholder="Search" id="search-input">
  <button class="search-btn"><svg class="pw-m-header__icon icon-search"><use xlink:href="#icon-search"></use></svg></button>
  `
+
+//  main section
+
+main.innerHTML=`
+<section id="stage"></section>`
+
+const stage=document.getElementById('stage')
+ 
+stage.innerHTML=`
+<div id="stage-container">
+  <div id="inner-stage-con">
+    <div id="stage-img-con">
+      <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="car-img">
+    </div>
+    <div id="stage-content-con"> 
+      <div id="stage-content-p">BMW Concept Speedtop</div>
+      <h1>A collector‘s item full of emotion</h1> 
+      <a href="">Read more</a>
+    </div>
+  </div>
+</div>`
 
