@@ -349,3 +349,16 @@ header {
         background-color: #fff;
     }
 }
+@media screen and (min-width:1600px) {
+    .header-container{
+        padding-inline: 230px;
+        max-width: 100%;
+        margin: 0;
+    } 
+    .header-logo-wrapper {
+        margin-left: -29px;
+    }
+    .header-slogan p{
+        margin-left: 0.5px;
+    }
+}
