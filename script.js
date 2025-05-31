@@ -43,6 +43,7 @@ burgerBtn.addEventListener("click",()=>{
 function menuAdd(){
     if(window.matchMedia("(min-width:768px)").matches){
         logoLink.style.opacity="1"
+        headerSlogan.style.marginLeft="9pt"
     }
     else{
         logoLink.style.opacity="0"
