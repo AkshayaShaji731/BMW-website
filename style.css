@@ -298,3 +298,54 @@ header {
     }
 
 }
+@media screen and (min-width:1280px) {
+    header{
+        margin-left:24px;
+        margin-right: 24px;
+        width: calc(100% - 3pc);
+    }
+    .header-container{
+        padding-inline: 100px;
+    }
+    .header-logo-wrapper{
+        margin-left: -30px;
+    }
+    .header-slogan{
+        margin-left: -6pt;
+    }
+    .header-burger-menu{
+        display: none;
+    }
+    #header-nav{
+        display: flex;
+        position: static;
+        margin: 0 -30px 0 24px;
+
+    }
+    #nav-con{
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0px;
+        width: 100%;
+    }
+    #nav-item {
+        flex-direction: row;
+        margin-right:9pt;
+        width: auto;
+    }
+    #nav-ul{
+        flex-direction: row ;
+        gap: 8px;
+    }
+    #search-con{
+        order:1;
+        padding: 0;
+        width: auto;
+    }
+    #search-input{
+        display: none;
+    }
+    .search-btn{
+        background-color: #fff;
+    }
+}
