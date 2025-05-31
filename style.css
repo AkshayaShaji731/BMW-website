@@ -263,6 +263,7 @@ main{
     display: block;
     margin: 0 auto 24px;
     position: relative;
+    max-width: 1600px;
 }
 #stage-container{
     padding-block: 7pc 78pt;
@@ -479,5 +480,16 @@ main{
     }
     .header-slogan p{
         margin-left: 0.5px;
+    }
+    #stage-img-con{
+        width:  82%;
+    }
+    #stage-content-con{
+        padding-inline: 20px 3px;
+        margin-top: -4px;
+    }
+    #stage-content-con a {
+        padding-top: 0px;
+        padding-bottom: 1px;
     }
 }
