@@ -122,6 +122,7 @@ stage.innerHTML=`
   <div id="inner-stage-con">
     <div id="stage-img-con">
     <picture>
+      <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
       <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
       <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
       <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">

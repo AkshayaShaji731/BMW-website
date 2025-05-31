@@ -382,6 +382,11 @@ main{
         padding-inline: 49.5px; 
     }
 }
+@media screen and (min-width:1024px){
+    #stage-img-con{
+        margin-left: 163px;
+    }
+}
 @media screen and (min-width:1280px) {
     header{
         margin-left:24px;
@@ -431,6 +436,23 @@ main{
     }
     .search-btn{
         background-color: #fff;
+    }
+    #inner-stage-con{
+        display: flex;
+        flex-direction: row-reverse;
+        padding-inline:100px 0;
+    }
+    #stage-img-con{
+        margin-left: 0;
+    }
+    #stage-content-con{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-top: -6px;
+        max-width: 470px;
+        max-width: 100%;
     }
 }
 @media screen and (min-width:1600px) {
