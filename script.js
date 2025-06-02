@@ -148,8 +148,8 @@ teaserOne.innerHTML=`
         <div id="con-1-img" >
           <div id="con-img-inner">
             <picture>
-               <source media="(min-width:650px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg">
-               <source media="(min-width:465px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg">
+               <source media="(min-width:1200px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg">
+               <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=768">
                <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg" alt="teser-img">
             </picture>
           </div>
@@ -173,8 +173,7 @@ teaserOne.innerHTML=`
         <div id="con1-text">
           <b>BMW Explained</b>
           <h3>How BMW shaped the sports sedan</h3>
-        </div>
-        
+        </div>  
       </a>
       </div>
     </div>

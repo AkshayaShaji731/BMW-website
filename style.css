@@ -466,6 +466,25 @@ main{
         width: auto;
         padding-inline: 49.5px; 
     }
+    /* teaser */
+    #teaser-1{
+        padding-top: 0.2px;
+    }
+    #teaser-con{
+        margin-inline: 0;
+    }
+    #con-1-img{
+        aspect-ratio: 16/9;
+    }
+    #con1-text{
+        padding:24px 32px 0 ;
+    }
+    #con1-text b {
+        font-size: 1rem;
+    }
+    #con1-text h3{
+        font-size: 1.5rem;
+    }
 }
 @media screen and (min-width:1024px){
     /* main */
