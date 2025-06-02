@@ -113,9 +113,11 @@ searchForm.innerHTML=`
 //  main section
 
 main.innerHTML=`
-<section id="stage"></section>`
+<section id="stage"></section>
+<section id="teaser-1"></section>`
 
 const stage=document.getElementById('stage')
+const teaserOne=document.getElementById("teaser-1")
  
 stage.innerHTML=`
 <div id="stage-container">
@@ -137,5 +139,47 @@ stage.innerHTML=`
     </div>
   </div>
 </div>`
+teaserOne.innerHTML=`
+<div id="teaser-inner">
+  <div id="teaser-con">
+    <div id="teaser-content-con">
+      <div id="teaser-content-1">
+      <a href="">
+        <div id="con-1-img" >
+          <div id="con-img-inner">
+            <picture>
+               <source media="(min-width:650px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg">
+               <source media="(min-width:465px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg">
+               <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg" alt="teser-img">
+            </picture>
+          </div>
+        </div>
+        <div id="con1-text">
+          <b>Innovation</b>
+          <h3>BMW Intelligence</h3>
+        </div>
 
+      </a>
+      </div>
+         <div id="teaser-content-1">
+      <a href="">
+        <div id="con-1-img" >
+          <div id="con-img-inner">
+          <video  width="3" height="4" playsinline loop muted autoplay>
+            <source  src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4" type="video/mp4">
+          </video>
+          </div>
+        </div>
+        <div id="con1-text">
+          <b>BMW Explained</b>
+          <h3>How BMW shaped the sports sedan</h3>
+        </div>
+        
+      </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+`
 
