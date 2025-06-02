@@ -115,16 +115,25 @@ searchForm.innerHTML=`
 main.innerHTML=`
 <section id="stage"></section>
 <section id="teaser-1"></section>
-<div class=spacer></div>`
+<div class=spacer></div>
+<section id="scroller"></section>`
 
 const stage=document.getElementById('stage')
 const teaserOne=document.getElementById("teaser-1")
+const scroller=document.getElementById("scroller")
  
 stage.innerHTML=`
 <div id="stage-container">
   <div id="inner-stage-con">
     <div id="stage-img-con">
-  
+    <picture>
+      <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
+      <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
+      <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
+      <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
+      <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360">
+      <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
+   </picture>
     </div>
     <div id="stage-content-con"> 
       <div id="stage-content-p">BMW Concept Speedtop</div>
@@ -141,9 +150,12 @@ teaserOne.innerHTML=`
       <a href="">
         <div id="con-1-img" >
           <div id="con-img-inner">
-           <video  width="3" height="4" playsinline loop muted autoplay>
-            <source  src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4" type="video/mp4">
-          </video>
+            <picture>
+               <source media="(min-width:1440px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1440"> 
+               <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1024">
+               <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=768">
+               <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg" alt="teser-img">
+            </picture>
           </div>
         </div>
         <div id="con1-text">
@@ -157,9 +169,10 @@ teaserOne.innerHTML=`
       <a href="">
         <div id="con-1-img" >
           <div id="con-img-inner">
-          <video  width="3" height="4" playsinline loop muted autoplay>
-            <source  src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4" type="video/mp4">
-          </video>
+        <video width="3" height="4" playsinline loop muted autoplay>
+          <source src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4" type="video/mp4" media="(min-width:768px)">
+          <source src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4" type="video/mp4">
+        </video>
           </div>
         </div>
         <div id="con1-text">
@@ -174,11 +187,37 @@ teaserOne.innerHTML=`
 </div>
 `
 
-/* <picture>
-<source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
-<source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
-<source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
-<source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
-<source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360">
-<img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
-</picture> */
+scroller.innerHTML=`
+<h2>Stay up to date with BMW.</h2>
+<div id="scroller-con">
+  <div id="scroller-inner-con">
+     <div id="scroller-item">
+     </div>
+  </div>
+</div>`
+
+const scrollItem=document.querySelector("#scroller-item")
+
+scroll()
+function scroll(){
+  let item=[`<span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span> All news`,"The first BMW fragrances","Sheer charging pleasure!","Spotify Playlist","Panoramic iDrive","Holiday Season","Kith for BMW"]
+  for(let i=0;i<item.length;i++){
+    let sItem=document.createElement("div")
+    sItem.classList.add("s-item")
+    sItem.innerHTML=`
+    <div class="item-img-con">
+      <div class="item-img">
+        <video id="item-video" playsinline loop muted autoplay>
+          <source src="/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/sky-00-teaser-home.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="item-text">
+      <div class="item-text-inner">
+        ${item[i]}
+      </div>
+    </div>
+    `
+    scrollItem.appendChild(sItem)
+  }
+}
