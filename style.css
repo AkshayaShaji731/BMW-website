@@ -982,6 +982,15 @@ main {
     #teaser-con {
         grid-column: 1 / -1;
     }
+    /* scroller */
+
+    #scroller{
+        padding-inline: 100px;
+    }
+    /* expert */
+    #expert-inner{
+        padding-inline:100px;
+    }
 }
 
 @media screen and (min-width:1440px) {
