@@ -213,7 +213,7 @@ scroller.innerHTML=`
         </div>
         <div class="item-text">
           <div class="item-text-inner">
-           All news
+           <span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span>All news
           </div>
         </div>
       </div>
@@ -260,12 +260,12 @@ function scroll(){
 function scrollTab(){
   let item=[`<span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span> All news`,"The first BMW fragrances","Sheer charging pleasure!","Spotify Playlist","Panoramic iDrive","Holiday Season","Kith for BMW"]
 
-  let img=["https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-26-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-24-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-20-media.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-17-media-portrait.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-26-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-24-media-high.jpg?imwidth=768"]
-  for(let i=1;i<item.length;i++){
+  let img=["https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-26-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-24-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-20-media.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-17-media-portrait.jpg?imwidth=768"]
+  for(let i=0;i<img.length;i++){
     let sItem2=document.createElement("div")
     sItem2.classList.add("s-item2")
     sItem2.innerHTML=`
-    <div class="item-img-con">
+    <div class="item-img-con" id="item-img-con-id">
       <div class="item-img">
         <picture id="item-video" playsinline loop muted autoplay>
           <img src="" alt="teaser" id="image">
@@ -274,11 +274,11 @@ function scrollTab(){
     </div>
     <div class="item-text">
       <div class="item-text-inner">
-        ${item[i]}
+        ${item[i+1]}
       </div>
     </div>
     `
-    sItem2.querySelector("img").src=img[i-1]
+    sItem2.querySelector("img").src=img[i]
     scrollItem2.appendChild(sItem2)
 }
 }
