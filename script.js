@@ -10,10 +10,8 @@ header.innerHTML = `
 const headerCon = document.querySelector(".header-container")
 
 headerCon.innerHTML=`
-  <div class="header-logo-wrapper">
-  </div>
-  <button class="header-burger-menu">
-  </button>
+  <div class="header-logo-wrapper"></div>
+  <button class="header-burger-menu"></button>
   <nav id="header-nav"></nav>`
 
 const headerlogo=document.querySelector(".header-logo-wrapper")
@@ -121,6 +119,8 @@ main.innerHTML=`
 const stage=document.getElementById('stage')
 const teaserOne=document.getElementById("teaser-1")
 const scroller=document.getElementById("scroller")
+
+// stage section
  
 stage.innerHTML=`
 <div id="stage-container">
@@ -130,8 +130,8 @@ stage.innerHTML=`
       <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
       <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
       <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
-      <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
-      <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360">
+      <source media="(min-width:568px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
+      <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360%20360w">
       <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
    </picture>
     </div>
@@ -142,6 +142,9 @@ stage.innerHTML=`
     </div>
   </div>
 </div>`
+
+// teaser
+
 teaserOne.innerHTML=`
 <div id="teaser-inner">
   <div id="teaser-con">
@@ -187,18 +190,37 @@ teaserOne.innerHTML=`
 </div>
 `
 
+// scroller
+
 scroller.innerHTML=`
 <h2>Stay up to date with BMW.</h2>
 <div id="scroller-con">
   <div id="scroller-inner-con">
-     <div id="scroller-item">
+     <div id="scroller-item-1"></div>
+     <div id="scroller-item-2">
+     <div class="s-item2" id="s-item-id">
+        <div class="item-img-con">
+          <div class="item-img">
+            <picture id="item-video" playsinline loop muted autoplay>
+              <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/sky-00-teaser-home.jpg?imwidth=768" alt="teaser">
+            </picture>
+          </div>
+        </div>
+        <div class="item-text">
+          <div class="item-text-inner">
+           All news
+          </div>
+        </div>
+     </div>
      </div>
   </div>
 </div>`
 
-const scrollItem=document.querySelector("#scroller-item")
+const scrollItem=document.querySelector("#scroller-item-1")
+const scrollItem2=document.querySelector("#scroller-item-2")
 
 scroll()
+scrollTab()
 function scroll(){
   let item=[`<span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span> All news`,"The first BMW fragrances","Sheer charging pleasure!","Spotify Playlist","Panoramic iDrive","Holiday Season","Kith for BMW"]
   for(let i=0;i<item.length;i++){
@@ -220,4 +242,30 @@ function scroll(){
     `
     scrollItem.appendChild(sItem)
   }
+}
+
+function scrollTab(){
+  let item=[`<span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span> All news`,"The first BMW fragrances","Sheer charging pleasure!","Spotify Playlist","Panoramic iDrive","Holiday Season","Kith for BMW"]
+
+  let img=["https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-26-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-24-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-20-media.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-17-media-portrait.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-26-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-24-media-high.jpg?imwidth=768"]
+  for(let i=1;i<item.length;i++){
+    let sItem2=document.createElement("div")
+    sItem2.classList.add("s-item2")
+    sItem2.innerHTML=`
+    <div class="item-img-con">
+      <div class="item-img">
+        <picture id="item-video" playsinline loop muted autoplay>
+          <img src="" alt="teaser" id="image">
+        </picture>
+      </div>
+    </div>
+    <div class="item-text">
+      <div class="item-text-inner">
+        ${item[i]}
+      </div>
+    </div>
+    `
+    sItem2.querySelector("img").src=img[i-1]
+    scrollItem2.appendChild(sItem2)
+}
 }

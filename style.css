@@ -38,7 +38,10 @@
     src: local("Playfair Display"), local("PlayfairDisplay"), url(clientlib-site/resources/fonts/playfair.woff2) format("woff2");
     unicode-range: U+00??, U+0131, U+0152-0153, U+02c6, U+02da, U+02dc, U+2000-206f, U+2074, U+20ac, U+2212, U+2215
 }
-
+:root {
+    --columns: 12;
+    --gutter: 16px;
+  }
 * {
     margin: 0;
     padding: 0;
@@ -465,7 +468,7 @@ main {
     width: 100vw;
 }
 
-#scroller-item {
+#scroller-item-1 {
     display: flex;
     height: 100%;
     width: 100%;
@@ -536,7 +539,35 @@ main {
     width: 100%;
     fill: currentColor;
 }
-
+#scroller-item-2{
+    display: none;
+    cursor: grab;
+    /* margin-right: -24px; */
+    transform: translate3d(0px,0px,0px);
+    height: 100%;
+    width: 100%;
+ }
+ .s-item2{
+     margin-right:16px;
+     height: 0;
+     padding-bottom: 50%;
+     width: calc(((100% - 176px) / 12) * 2 + 16px);
+     transition: transform .3s ease, width .3s ease, -webkit-transform .3s ease;
+     transform: translateY(20%);
+     flex-shrink: 0;
+ }
+ #s-item-id{
+    width: calc(((100% - (calc(var(--columns) - 1) * var(--gutter))) / var(--columns)) * 4 + var(--gutter) * 3);
+    transform: translateY(0);
+ }
+ .item-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+ }
 @media screen and (min-width:768px) {
 
     /* header */
@@ -632,6 +663,30 @@ main {
 
     #con1-text h3 {
         font-size: 1.5rem;
+    }
+    /* scroller */
+    #scroller{
+        display: grid;
+        column-gap: 16px;
+        grid-template-columns: repeat(12,1fr);
+    }
+    #scroller h2{
+        grid-column: 1/-1;
+        font-size: 3.125vw;
+        line-height: 4.296875vw;
+        margin-bottom:88px;
+    }
+    #scroller-con{
+        grid-column: 1/-1;
+    }
+    #scroller-inner-con {
+        padding-inline: 30px;
+    }
+    #scroller-item-1{
+        display: none;
+    }
+    #scroller-item-2{
+        display: flex;
     }
 }
 
