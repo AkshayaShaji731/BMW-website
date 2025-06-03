@@ -622,13 +622,18 @@ main {
  }
  #expert-con{
     display: block;
-    padding: 56px 30px;
+    padding: 56px 0px;
     margin: 0 auto;
     max-width: 1600px;
  }
+ #expert-inner{
+    padding:0 30px;
+    display: block;
+ }
  #expert-media{
     display: block;
-    align-items: center;
+    align-self: center;
+    grid-column-end: span 6;
  }
  #expert-media h2{
     font-size: 1.75rem;
@@ -652,6 +657,18 @@ main {
     width: 100%;
     object-fit: cover;
  }
+ .expert-content-con{
+    display: block;
+    grid-column-start: 8;
+    grid-column-end: span 5;
+ }
+ .expert-content-con h2{
+    font-size: 1.75rem;
+    font-weight:400;
+    line-height:1.3;
+    text-transform: uppercase;
+    display: none;
+}
  .expert-content{
     display:inline-flex;
     align-items: center;
@@ -660,6 +677,7 @@ main {
     line-height: 1.3;
     margin-top: 2pc;
     text-transform: uppercase;
+    grid-column-start:8;
  }
  .expert-content span{
     min-width: 1pc;
@@ -798,6 +816,35 @@ main {
     }
     #scroller-item-2{
         display: flex;
+    }
+    .scroll-btn{
+        display: none;
+    }
+    
+    /* expert */
+
+    #expert-inner{
+        display: grid;
+        column-gap: 16px;
+        grid-template-columns: repeat(12,1fr);
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    #expert-media h2{
+        display: none;
+    }
+    .expert-video{
+        margin-top: 0;
+        aspect-ratio: auto 16/9;
+    }
+    .expert-content-con{
+        align-self: center;
+    }
+    .expert-content-con h2{
+        display: block;
+    }
+    .expert-content{
+        margin-top: 1pc;
     }
 }
 

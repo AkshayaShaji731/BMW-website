@@ -115,12 +115,15 @@ main.innerHTML=`
 <section id="teaser-1"></section>
 <div class=spacer></div>
 <section id="scroller"></section>
-<section id="expert"></section>`
+<section id="expert"></section>
+<div class=spacer></div>
+<section id="highlight"></section>`
 
 const stage=document.getElementById('stage')
 const teaserOne=document.getElementById("teaser-1")
 const scroller=document.getElementById("scroller")
 const expert=document.getElementById("expert")
+const highLight=document.getElementById("highlight")
 
 // stage section
  
@@ -282,6 +285,7 @@ function scrollTab(){
 
 expert.innerHTML=`
 <div id="expert-con">
+ <div id="expert-inner">
   <div id="expert-media">
    <h2>Become a bmw expert</h2>
    <div class="expert-video" >
@@ -289,10 +293,14 @@ expert.innerHTML=`
           <source src="https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/Automotive%20Life/bmw-explained-logo/exl-01-stage-hd9.mp4">
         </video>
    </div>
-   <div class="expert-content">
+  </div>
+  <div class="expert-content-con">
+    <h2>Become a bmw expert</h2>
+    <div class="expert-content">
      <span><svg class="pw-a-icon-link__icon" focusable="false"><use xlink:href="#icon-link-arrow"></use></svg></span>
      bmw explained
    </div>
   </div>
+ </div> 
 </div>
 `
