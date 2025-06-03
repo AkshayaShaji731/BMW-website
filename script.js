@@ -114,11 +114,13 @@ main.innerHTML=`
 <section id="stage"></section>
 <section id="teaser-1"></section>
 <div class=spacer></div>
-<section id="scroller"></section>`
+<section id="scroller"></section>
+<section id="expert"></section>`
 
 const stage=document.getElementById('stage')
 const teaserOne=document.getElementById("teaser-1")
 const scroller=document.getElementById("scroller")
+const expert=document.getElementById("expert")
 
 // stage section
  
@@ -198,7 +200,7 @@ scroller.innerHTML=`
   <div id="scroller-inner-con">
      <div id="scroller-item-1"></div>
      <div id="scroller-item-2">
-     <div class="s-item2" id="s-item-id">
+      <div class="s-item2" id="s-item-id">
         <div class="item-img-con">
           <div class="item-img">
             <picture id="item-video" playsinline loop muted autoplay>
@@ -211,7 +213,15 @@ scroller.innerHTML=`
            All news
           </div>
         </div>
+      </div>
      </div>
+     <div class="scroll-btn">
+      <button id="s-btn-left" class="s-btn">
+        <svg class="i" aria-hidden="true" focusable="false"><use xlink:href="#icon-chevron-left"></use></svg>
+      </button>
+      <button id="s-btn-right" class="s-btn">
+        <svg class="i" aria-hidden="true" focusable="false"><use xlink:href="#icon-chevron-right"></use></svg>
+      </button>
      </div>
   </div>
 </div>`
@@ -269,3 +279,20 @@ function scrollTab(){
     scrollItem2.appendChild(sItem2)
 }
 }
+
+expert.innerHTML=`
+<div id="expert-con">
+  <div id="expert-media">
+   <h2>Become a bmw expert</h2>
+   <div class="expert-video" >
+        <video playsinline loop muted autoplay>
+          <source src="https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/Automotive%20Life/bmw-explained-logo/exl-01-stage-hd9.mp4">
+        </video>
+   </div>
+   <div class="expert-content">
+     <span><svg class="pw-a-icon-link__icon" focusable="false"><use xlink:href="#icon-link-arrow"></use></svg></span>
+     bmw explained
+   </div>
+  </div>
+</div>
+`
