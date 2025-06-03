@@ -116,7 +116,7 @@ main.innerHTML=`
 <div class=spacer></div>
 <section id="scroller"></section>
 <section id="expert"></section>
-<div class=spacer></div>
+<div class=spacer-2></div>
 <section id="highlight"></section>`
 
 const stage=document.getElementById('stage')
@@ -304,3 +304,14 @@ expert.innerHTML=`
  </div> 
 </div>
 `
+
+highLight.innerHTML=`
+<div id="highlight-con">
+ <div id="highlight-content">
+   <h2>The BMW Podcast: Changing Lanes</h2>
+   <p>
+      Changing Lanes is the official podcast from BMW. In these audio series, we take you with us on new journeys through the BMW universe. Find out more about sustainability, innovation, technology, mobility and the latest trends. You can find and subscribe to Changing Lanes on all major podcast platforms, so tune in!
+   </p>
+    <a href="">Listen now</a>
+ </div>
+</div>`
