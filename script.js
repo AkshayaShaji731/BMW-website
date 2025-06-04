@@ -131,14 +131,14 @@ const highLight = document.getElementById("highlight")
 // <div id="stage-container">
 //   <div id="inner-stage-con">
 //     <div id="stage-img-con">
-//     <picture>
-//       <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
-//       <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
-//       <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
-//       <source media="(min-width:568px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
-//       <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360%20360w">
-//       <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
-//    </picture>
+  //   <picture>
+  //     <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
+  //     <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
+  //     <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
+  //     <source media="(min-width:568px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
+  //     <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360%20360w">
+  //     <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
+  //  </picture>
 //     </div>
 //     <div id="stage-content-con"> 
 //       <div id="stage-content-p">BMW Concept Speedtop</div>
@@ -175,16 +175,18 @@ teaserOne.innerHTML = `
         <div id="con-1-img" >
           <div id="con-img-inner">
             <picture>
-               <source media="(min-width:1440px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1440"> 
-               <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1024">
-               <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=768">
-               <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg" alt="teser-img">
+              <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
+              <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
+              <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
+              <source media="(min-width:568px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
+              <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-high.jpg?imwidth=360">
+              <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
             </picture>
           </div>
         </div>
         <div id="con1-text">
-          <b>Innovation</b>
-          <h3>BMW Intelligence</h3>
+          <b>BMW Concept Speedtop</b>
+          <h3>A collector‘s item full of emotion</h3>
         </div>
 
       </a>
@@ -193,15 +195,17 @@ teaserOne.innerHTML = `
       <a href="">
         <div id="con-1-img" >
           <div id="con-img-inner">
-        <video width="3" height="4" playsinline loop muted autoplay>
-          <source src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4" type="video/mp4" media="(min-width:768px)">
-          <source src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4" type="video/mp4">
-        </video>
+           <picture>
+            <source media="(min-width:1440px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1440"> 
+            <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1024">
+            <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=768">
+            <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-high.jpg" alt="teser-img">
+           </picture>
           </div>
         </div>
         <div id="con1-text">
-          <b>BMW Explained</b>
-          <h3>How BMW shaped the sports sedan</h3>
+          <b>Innovation</b>
+          <h3>BMW Intelligence</h3>
         </div>  
       </a>
       </div>
