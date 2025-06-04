@@ -5,7 +5,6 @@
     font-weight: 400;
     src: url(/font/BMWTypeNextLatin.woff2)
 }
-
 @font-face {
     font-display: swap;
     font-family: BMWTypeNextLatin Light;
@@ -13,7 +12,6 @@
     font-weight: 300;
     src: url(/font/BMWTypeNextLatin-Light.woff2)
 }
-
 @font-face {
     font-display: swap;
     font-family: epaasLinkFont;
@@ -21,7 +19,6 @@
     font-weight: 700;
     src: local("BMWTypeNextLatin"), url(clientlib-site/resources/fonts/BMWTypeNextLatin.woff2) format("woff2")
 }
-
 @font-face {
     font-display: swap;
     font-family: epaasTextFont;
@@ -29,7 +26,6 @@
     font-weight: 400;
     src: local("BMWTypeNextLatin"), url(clientlib-site/resources/fonts/BMWTypeNextLatin.woff2) format("woff2")
 }
-
 @font-face {
     font-display: swap;
     font-family: Playfair Display;
@@ -38,18 +34,15 @@
     src: local("Playfair Display"), local("PlayfairDisplay"), url(clientlib-site/resources/fonts/playfair.woff2) format("woff2");
     unicode-range: U+00??, U+0131, U+0152-0153, U+02c6, U+02da, U+02dc, U+2000-206f, U+2074, U+20ac, U+2212, U+2215
 }
-
 :root {
     --columns: 12;
     --gutter: 16px;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     color: #262626;
     font-family: BMWTypeNextLatin;
@@ -68,7 +61,6 @@ header {
     width: 100%;
     z-index: 10000;
 }
-
 .header-container {
     display: block;
     background-color: #fff;
@@ -81,7 +73,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
 .header-logo-wrapper {
     position: relative;
     display: flex;
@@ -89,7 +80,6 @@ header {
     max-width: 300px;
     align-items: center;
 }
-
 .logo-link {
     display: block;
     position: absolute;
@@ -99,14 +89,12 @@ header {
     text-decoration: none;
     cursor: pointer;
 }
-
 .logo-link img {
     display: block;
     height: 3pc;
     width: auto;
     aspect-ratio: auto 100 / 100;
 }
-
 .header-slogan {
     display: block;
     position: absolute;
@@ -117,17 +105,14 @@ header {
     font-size: 1pc;
     line-height: 26px;
 }
-
 .header-slogan p {
     margin-bottom: 0;
     /* margin: 0 0 25px; */
 }
-
 .header-slogan p strong {
     font-family: BMWTypeNextLatin;
     font-weight: 700;
 }
-
 .header-burger-menu {
     display: flex;
     justify-content: center;
@@ -140,7 +125,6 @@ header {
     outline: none;
     color: currentColor;
 }
-
 .header-burger-menu svg {
     width: 20px;
     height: 20px;
@@ -150,7 +134,6 @@ header {
     font-size: 100%;
 
 }
-
 #header-nav {
     display: none;
     position: fixed;
@@ -160,7 +143,6 @@ header {
     top: 6pc;
     width: 100%;
 }
-
 #nav-con {
     display: flex;
     flex-direction: column;
@@ -169,14 +151,12 @@ header {
     width: 100%;
     background-color: #fff;
 }
-
 #nav-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
 }
-
 #nav-ul {
     display: flex;
     flex-direction: column;
@@ -185,11 +165,9 @@ header {
     width: 100%;
     margin-top: 2px;
 }
-
 #nav-ul li {
     position: relative;
 }
-
 #nav-ul li a {
     line-height: 1.2;
     display: flex;
@@ -207,20 +185,17 @@ header {
     outline: none;
     font-size: 1.125rem;
 }
-
 #search-con {
     display: block;
     order: -1;
     padding: 1rem 0;
     width: 100%;
 }
-
 #search-form {
     display: flex;
     gap: 4px;
     width: 100%;
 }
-
 #search-input {
     display: block;
     flex-grow: 1;
@@ -235,7 +210,6 @@ header {
     line-height: 1.15;
     font-family: BMWTypeNextLatin;
 }
-
 .search-btn {
     background-color: #f8f8f8;
     border: 2px solid transparent;
@@ -250,7 +224,6 @@ header {
     cursor: pointer;
     white-space: nowrap;
 }
-
 .search-btn svg {
     width: 20px;
     height: 20px;
@@ -272,7 +245,6 @@ main {
     position: relative;
     max-width: 1600px;
 }
-
 #stage-container {
     padding-block: 7pc 78pt;
     width: 100%;
@@ -281,13 +253,11 @@ main {
     position: relative;
     height: 100%;
 }
-
 #inner-stage-con {
     display: block;
     width: 100%;
     padding-inline: 30px;
 }
-
 #stage-img-con {
     aspect-ratio: 16/9;
     display: block;
@@ -295,7 +265,6 @@ main {
     box-sizing: border-box;
     position: relative;
 }
-
 #stage-img-con video{
     position: absolute;
     bottom: 0;
@@ -306,24 +275,16 @@ main {
     height: 100%;
     object-fit: cover;
 }
-
-/* #stage-img-con img {
-    object-fit: cover;
-    max-width: 100%;
-} */
-
 #stage-content-con {
     margin-top: 24px;
     display: block;
 }
-
 #stage-content-p {
     font-size: 1.25rem;
     line-height: 1.4;
     display: block;
     color: #262626;
 }
-
 #stage-content-con h1 {
     margin: 9pt 0 40px;
     font-size: 2rem;
@@ -334,7 +295,6 @@ main {
     display: block;
     color: #262626;
 }
-
 #stage-content-con a {
     background-color: #1c69d4;
     color: #fff;
@@ -355,34 +315,29 @@ main {
 #teaser-1 {
     display: block;
 }
-
 #teaser-inner {
     display: block;
     padding-inline: 30px;
     max-width: 1600px;
     margin: 0 auto;
 }
-
 #teaser-con {
     display: flex;
     flex-direction: column;
     margin: 3pc 0;
     margin-inline: -30px;
 }
-
 #teaser-content-con {
     display: flex;
     gap: 4px;
     padding-bottom: 56px;
 }
-
 #teaser-content-1 {
     width: calc(50% - 2px);
     flex: 1 0 auto;
     display: block;
     position: relative;
 }
-
 #teaser-content-1 a {
     text-decoration: none;
     aspect-ratio: auto;
@@ -392,14 +347,12 @@ main {
     overflow: hidden;
 
 }
-
 #con-1-img {
     aspect-ratio: 3/4;
     overflow: hidden;
     position: relative;
     display: block;
 }
-
 #con-img-inner {
     position: absolute;
     top: 0;
@@ -407,27 +360,23 @@ main {
     width: 100%;
     height: 100%;
 }
-
 #con-1-img img {
     object-fit: cover;
     height: 100%;
     width: 100%;
 
 }
-
 #con-1-img video {
     object-fit: cover;
     height: 100%;
     width: 100%;
 
 }
-
 #con1-text {
     display: flex;
     flex-direction: column;
     padding: 1pc 24px 0;
 }
-
 #con1-text b {
     margin-bottom: 6px;
     font-weight: 700;
@@ -435,7 +384,6 @@ main {
     line-height: 1.6;
     color: #262626;
 }
-
 #con1-text h3 {
     font-size: 1.25rem;
     font-weight: 400;
@@ -458,7 +406,6 @@ main {
     margin: 0 auto;
     max-width: 1600px;
 }
-
 #scroller h2 {
     display: block;
     margin-bottom: 3pc;
@@ -468,11 +415,9 @@ main {
     line-height: 1.3;
     text-transform: uppercase;
 }
-
 #scroller-con {
     display: block;
 }
-
 #scroller-inner-con {
     display: block;
     position: relative;
@@ -482,14 +427,12 @@ main {
     margin-inline: -30px;
     width: 100vw;
 }
-
 #scroller-item-1 {
     display: flex;
     height: 100%;
     width: 100%;
     cursor: grab;
 }
-
 .s-item {
     display: flex;
     flex-direction: column;
@@ -498,24 +441,20 @@ main {
     width: calc(100% - 16px);
     margin-right: 16px;
 }
-
 .item-img-con {
     display: block;
     aspect-ratio: 3/4;
     cursor: pointer;
 }
-
 #item-img-con-id{
     aspect-ratio: 9/16;
 }
-
 .item-img {
     height: 100%;
     width: 100%;
     position: relative;
     /* display: block; */
 }
-
 #item-video {
     display: block;
     height: 100%;
@@ -527,14 +466,12 @@ main {
     /* aspect-ratio: 3/4; */
 
 }
-
 .item-text {
     display: block;
     border-bottom: 0;
     padding-top: 40px;
     position: relative;
 }
-
 .item-text-inner {
     position: absolute;
     bottom: 0;
@@ -546,7 +483,6 @@ main {
     line-height: 1.3;
     white-space: nowrap;
 }
-
 .item-text-inner span {
     margin-right: 8px;
     width: 1em;
@@ -555,7 +491,6 @@ main {
     position: relative;
 
 }
-
 .item-text-inner span svg {
     display: block;
     height: 100%;
@@ -565,7 +500,6 @@ main {
     width: 100%;
     fill: currentColor;
 }
-
 #scroller-item-2 {
     display: none;
     cursor: grab;
@@ -575,7 +509,6 @@ main {
     overflow: hidden;
     width: 100%;
 }
-
 .s-item2 {
     margin-right: 16px;
     height: 0;
@@ -585,12 +518,10 @@ main {
     transform: translateY(12.5%);
     flex-shrink: 0;
 }
-
 #s-item-id {
     width: calc(((100% - (calc(var(--columns) - 1) * var(--gutter))) / var(--columns)) * 4 + var(--gutter) * 3);
     transform: translateY(0);
 }
-
 .item-img img {
     object-fit: cover;
     width: 100%;
@@ -599,7 +530,6 @@ main {
     aspect-ratio: 3/4;
     cursor: pointer;
 }
-
 .scroll-btn {
     display: flex;
     gap: 9pt;
@@ -613,7 +543,6 @@ main {
     z-index: 2;
     opacity: 1;
 }
-
 .s-btn {
     border: none;
     border-radius: 24px;
@@ -622,20 +551,17 @@ main {
     width: 3pc;
     outline: none;
 }
-
 #s-btn-left {
     background-color: #fff;
     color: #757575;
     padding-left: 14px;
     padding-right: 18px;
 }
-
 .s-btn svg {
     height: 100%;
     width: 100%;
     fill: currentColor;
 }
-
 #s-btn-right {
     padding-left: 18px;
     padding-right: 14px;
@@ -643,7 +569,6 @@ main {
     color: #fff;
     cursor: pointer;
 }
-
 .s-btn-right svg {
     height: 100%;
     width: 100%;
@@ -655,39 +580,33 @@ main {
 #expert {
     display: block;
 }
-
 #expert-con {
     display: block;
     padding: 56px 0px;
     margin: 0 auto;
     max-width: 1600px;
 }
-
 #expert-inner {
     padding: 0 30px;
     display: block;
 }
-
 #expert-media {
     display: block;
     align-self: center;
     grid-column-end: span 6;
 }
-
 #expert-media h2 {
     font-size: 1.75rem;
     font-weight: 400;
     line-height: 1.3;
     text-transform: uppercase;
 }
-
 .expert-video {
     margin-top: 2pc;
     position: relative;
     width: 100%;
     aspect-ratio: 16/9;
 }
-
 .expert-video video {
     bottom: 0;
     height: 100%;
@@ -698,13 +617,11 @@ main {
     width: 100%;
     object-fit: cover;
 }
-
 .expert-content-con {
     display: block;
     grid-column-start: 8;
     grid-column-end: span 5;
 }
-
 .expert-content-con h2 {
     font-size: 1.75rem;
     font-weight: 400;
@@ -712,7 +629,6 @@ main {
     text-transform: uppercase;
     display: none;
 }
-
 .expert-content {
     display: inline-flex;
     align-items: center;
@@ -723,7 +639,6 @@ main {
     text-transform: uppercase;
     grid-column-start: 8;
 }
-
 .expert-content span {
     min-width: 1pc;
     height: 1rem;
@@ -733,7 +648,6 @@ main {
     white-space: wrap;
     margin-right: 8px;
 }
-
 .expert-content span svg {
     display: block;
     height: 100%;
@@ -743,32 +657,27 @@ main {
     width: 100%;
     fill: currentColor;
 }
-
 /* spacer-2 */
 .spacer-2 {
     display: block;
     height: 3pc;
 }
-
 /* highlight */
 
 #highlight {
     display: block;
     padding: 3pc 0;
 }
-
 #highlight-con {
     padding-inline: 30px;
     display: block;
     margin: 0 auto;
     max-width: 1600px;
 }
-
 #highlight-content {
     display: flex;
     flex-direction: column;
 }
-
 #highlight-content h2 {
     display: block;
     margin-bottom: 1pc;
@@ -778,7 +687,6 @@ main {
     line-height: 1.3;
     text-transform: uppercase;
 }
-
 #highlight-content p {
     display: block;
     margin-bottom: 40px;
@@ -786,7 +694,6 @@ main {
     font-weight: 400;
     line-height: 1.6
 }
-
 #highlight-content a {
     margin-bottom: 2pc;
     margin-right: auto;
@@ -806,7 +713,6 @@ main {
     text-align: center;
     text-decoration: none;
 }
-
 #highlight-main{
     display: block;
 }
@@ -876,6 +782,54 @@ main {
     font-weight: 400;
     line-height: 1.3
 }
+#model{
+    display:block;
+    padding: 56px 0;
+    text-align: center;
+}
+#model-con{
+    padding-inline: 30px;
+    margin: 0 auto;
+    max-width: 1600px;
+    display: block;
+}
+#model-con h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.3;
+    text-transform: uppercase;
+    font-family: BMWTypeNextLatin Light;
+    display: block;
+}
+#model-con a{
+    margin-top: 2pc;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 900;
+    line-height: 1.3;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #262626;
+}
+#model-con a span{
+    height: 1rem;
+    margin-right:8px;
+    overflow: hidden;
+    position: relative;
+    width: 1rem;
+    display: block;
+}
+#model-con a span svg{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
 
 @media screen and (min-width:768px) {
 
@@ -883,7 +837,6 @@ main {
     header {
         margin-top: 24px;
     }
-
     .logo-link {
         position: relative;
     }

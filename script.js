@@ -117,36 +117,17 @@ main.innerHTML = `
 <section id="scroller"></section>
 <section id="expert"></section>
 <div class=spacer-2></div>
-<section id="highlight"></section>`
+<section id="highlight"></section>
+<section id="model"></section>`
 
 const stage = document.getElementById('stage')
 const teaserOne = document.getElementById("teaser-1")
 const scroller = document.getElementById("scroller")
 const expert = document.getElementById("expert")
 const highLight = document.getElementById("highlight")
+const model=document.getElementById("model")
 
 // stage section
-
-// stage.innerHTML=`
-// <div id="stage-container">
-//   <div id="inner-stage-con">
-//     <div id="stage-img-con">
-//   <picture>
-//     <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
-//     <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
-//     <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
-//     <source media="(min-width:568px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
-//     <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360%20360w">
-//     <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
-//  </picture>
-//     </div>
-//     <div id="stage-content-con"> 
-//       <div id="stage-content-p">BMW Concept Speedtop</div>
-//       <h1>A collector‘s item full of emotion</h1> 
-//       <a href="">Read more</a>
-//     </div>
-//   </div>
-// </div>`
 
 stage.innerHTML = `
     <div id="stage-container">
@@ -431,3 +412,14 @@ function slideHighLight() {
   slides[slideIndex - 1].style.display = "block";
   setTimeout(slideHighLight,5000);
 }
+
+// model
+
+model.innerHTML=`
+  <div id="model-con">
+    <h2>All BMW Models</h2>
+    <a href="">
+      <span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span>
+      Find your BMW
+    </a>
+  </div>`
