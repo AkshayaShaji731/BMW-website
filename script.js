@@ -420,7 +420,7 @@ function highLightMed() {
 }
 
 let slideIndex = 0;
-slideHighLight()
+// slideHighLight()
 function slideHighLight() {
   let slides = document.getElementsByClassName("highlight-inner-con");
   for (let i = 0; i < slides.length; i++) {

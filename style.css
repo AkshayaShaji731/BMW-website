@@ -814,7 +814,7 @@ main {
     display: block;
     margin-inline:-30px;
     width: 100vw;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding-bottom: 78pt;
     position: relative;
 }
@@ -865,7 +865,7 @@ main {
 }
 .highlight-text span{
     display: block;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 9pt;
     font-size: 1.25rem;
     font-weight: 400;
@@ -1040,13 +1040,40 @@ main {
     }
 
     /* highlight */
-
+    #highlight-con{
+        display: grid;
+        column-gap: 16px;
+        grid-template-columns: repeat(12,1fr);
+    }
+    #highlight-content{
+        grid-column:1 / -1;
+    }
     #highlight-content h2 {
         font-size: 2.5rem;
     }
 
     #highlight-content p {
         font-size: 1rem;
+    }
+    #highlight-content a{
+        margin-bottom: 40px;
+    } 
+    #highlight-main{
+        grid-column:1 / -1;
+    }
+    #highlight-main-inner{
+        margin-inline: 0;
+        width: 100%;
+    }
+    .highlight-inner-con{
+        margin-right: 16px;
+        width: calc(((100% - (calc(var(--columns) - 1) * var(--gutter))) / var(--columns)) * 3 + var(--gutter) * 2);
+    }
+    .highlight-text{
+        padding-inline: 0px;
+    }
+    .highlight-text h3{
+        font-size: 1.5rem;
     }
 }
 
