@@ -1,6 +1,6 @@
 const root = document.getElementById("root")
 const header = document.getElementById("header")
-const main=document.getElementById("main")
+const main = document.getElementById("main")
 
 // header section
 
@@ -9,108 +9,108 @@ header.innerHTML = `
 
 const headerCon = document.querySelector(".header-container")
 
-headerCon.innerHTML=`
+headerCon.innerHTML = `
   <div class="header-logo-wrapper"></div>
   <button class="header-burger-menu"></button>
   <nav id="header-nav"></nav>`
 
-const headerlogo=document.querySelector(".header-logo-wrapper")
-const burgerBtn=document.querySelector(".header-burger-menu")
-const nav=document.getElementById("header-nav")
+const headerlogo = document.querySelector(".header-logo-wrapper")
+const burgerBtn = document.querySelector(".header-burger-menu")
+const nav = document.getElementById("header-nav")
 
-headerlogo.innerHTML=`
+headerlogo.innerHTML = `
   <a href="index.html" class="logo-link"></a>
   <div class="header-slogan"></div>`
 
-const logoLink=document.querySelector(".logo-link")
-const headerSlogan=document.querySelector(".header-slogan")
+const logoLink = document.querySelector(".logo-link")
+const headerSlogan = document.querySelector(".header-slogan")
 
-logoLink.innerHTML=`
+logoLink.innerHTML = `
   <img src="https://www.bmw.com/etc.clientlibs/settings/wcm/designs/bmwcom/base/resources/ci2020/img/logo-bmw-com-gray.svg" alt="BMW-logo">
   `
-headerSlogan.innerHTML=`
+headerSlogan.innerHTML = `
    <p>Sheer Driving
        <strong>Pleasure</strong>
    </p>`
-burgerBtn.innerHTML=`
+burgerBtn.innerHTML = `
     <svg class="pw-m-header__icon pw-m-header__icon-menu" style="display: block;"><use xlink:href="#icon-burger-menu"></use></svg>`
-    
-burgerBtn.addEventListener("click",()=>{
-    menuAdd();
-})    
-function menuAdd(){
-    if(window.matchMedia("(min-width:768px)").matches){
-        logoLink.style.opacity="1"
-        headerSlogan.style.marginLeft="9pt"
-    }
-    else{
-        logoLink.style.opacity="0"
-    }
-    headerSlogan.style.opacity="1"
-    headerSlogan.style.transform=" translateY(-50%) translateX(0)"
-    nav.style.display="block"
-    burgerBtn.innerHTML=`<svg class="pw-m-header__icon pw-m-header__icon-close" style="display: block;"><use xlink:href="#icon-close"></use></svg>` 
-    burgerBtn.addEventListener("click",()=>{
-        menuClose()
-       })  
+
+burgerBtn.addEventListener("click", () => {
+  menuAdd();
+})
+function menuAdd() {
+  if (window.matchMedia("(min-width:768px)").matches) {
+    logoLink.style.opacity = "1"
+    headerSlogan.style.marginLeft = "9pt"
+  }
+  else {
+    logoLink.style.opacity = "0"
+  }
+  headerSlogan.style.opacity = "1"
+  headerSlogan.style.transform = " translateY(-50%) translateX(0)"
+  nav.style.display = "block"
+  burgerBtn.innerHTML = `<svg class="pw-m-header__icon pw-m-header__icon-close" style="display: block;"><use xlink:href="#icon-close"></use></svg>`
+  burgerBtn.addEventListener("click", () => {
+    menuClose()
+  })
 }
-function menuClose(){
-    logoLink.style.opacity="1"
-    // headerSlogan.style.opacity="0"
-    if(window.matchMedia("(min-width:768px)").matches){
-        headerSlogan.style.opacity="1"
-    }
-    else{
-        headerSlogan.style.opacity="0"
-    }
-    nav.style.display="none"
-    burgerBtn.innerHTML=`
+function menuClose() {
+  logoLink.style.opacity = "1"
+  // headerSlogan.style.opacity="0"
+  if (window.matchMedia("(min-width:768px)").matches) {
+    headerSlogan.style.opacity = "1"
+  }
+  else {
+    headerSlogan.style.opacity = "0"
+  }
+  nav.style.display = "none"
+  burgerBtn.innerHTML = `
     <svg class="pw-m-header__icon pw-m-header__icon-menu" style="display: block;"><use xlink:href="#icon-burger-menu"></use></svg>`
-    burgerBtn.addEventListener("click",()=>{
-        menuAdd()
-       }) 
+  burgerBtn.addEventListener("click", () => {
+    menuAdd()
+  })
 }
 
-nav.innerHTML=`
+nav.innerHTML = `
 <div id="nav-con"></div>`
 
-const navCon=document.getElementById("nav-con")
+const navCon = document.getElementById("nav-con")
 
-navCon.innerHTML=`
+navCon.innerHTML = `
 <div id="nav-item"></div>
 <div id="search-con"></div>`
 
-const navItem=document.getElementById("nav-item")
-const searchCon=document.getElementById("search-con")
+const navItem = document.getElementById("nav-item")
+const searchCon = document.getElementById("search-con")
 
-navItem.innerHTML=`
+navItem.innerHTML = `
 <ul id="nav-ul"></ul>`
 
-const navItemUl=document.getElementById("nav-ul")
+const navItemUl = document.getElementById("nav-ul")
 createNav()
-function createNav(){
-    let ItemName=["Home","Circular World","Digital Journey","Electric Future","Freude","Models"]
-    let ItemLink=["index.html","index.html","index.html","index.html","index.html","index.html",]
-    for (let i=0;i<ItemName.length;i++){
-       let li=document.createElement("li")
-       li.innerHTML=`
+function createNav() {
+  let ItemName = ["Home", "Circular World", "Digital Journey", "Electric Future", "Freude", "Models"]
+  let ItemLink = ["index.html", "index.html", "index.html", "index.html", "index.html", "index.html",]
+  for (let i = 0; i < ItemName.length; i++) {
+    let li = document.createElement("li")
+    li.innerHTML = `
         <a href="${ItemLink[i]}">${ItemName[i]}</a>`
-        navItemUl.appendChild(li)
-    }
+    navItemUl.appendChild(li)
+  }
 }
-searchCon.innerHTML=`
+searchCon.innerHTML = `
 <form id="search-form"></form>`
 
-const searchForm=document.getElementById("search-form")
-  
-searchForm.innerHTML=`
+const searchForm = document.getElementById("search-form")
+
+searchForm.innerHTML = `
  <input type="text" placeholder="Search" id="search-input">
  <button class="search-btn"><svg class="pw-m-header__icon icon-search"><use xlink:href="#icon-search"></use></svg></button>
  `
 
 //  main section
 
-main.innerHTML=`
+main.innerHTML = `
 <section id="stage"></section>
 <section id="teaser-1"></section>
 <div class=spacer></div>
@@ -119,38 +119,54 @@ main.innerHTML=`
 <div class=spacer-2></div>
 <section id="highlight"></section>`
 
-const stage=document.getElementById('stage')
-const teaserOne=document.getElementById("teaser-1")
-const scroller=document.getElementById("scroller")
-const expert=document.getElementById("expert")
-const highLight=document.getElementById("highlight")
+const stage = document.getElementById('stage')
+const teaserOne = document.getElementById("teaser-1")
+const scroller = document.getElementById("scroller")
+const expert = document.getElementById("expert")
+const highLight = document.getElementById("highlight")
 
 // stage section
- 
-stage.innerHTML=`
-<div id="stage-container">
-  <div id="inner-stage-con">
-    <div id="stage-img-con">
-    <picture>
-      <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
-      <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
-      <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
-      <source media="(min-width:568px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
-      <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360%20360w">
-      <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
-   </picture>
-    </div>
-    <div id="stage-content-con"> 
-      <div id="stage-content-p">BMW Concept Speedtop</div>
-      <h1>A collector‘s item full of emotion</h1> 
-      <a href="">Read more</a>
-    </div>
-  </div>
-</div>`
+
+// stage.innerHTML=`
+// <div id="stage-container">
+//   <div id="inner-stage-con">
+//     <div id="stage-img-con">
+//     <picture>
+//       <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
+//       <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
+//       <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
+//       <source media="(min-width:568px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
+//       <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360%20360w">
+//       <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
+//    </picture>
+//     </div>
+//     <div id="stage-content-con"> 
+//       <div id="stage-content-p">BMW Concept Speedtop</div>
+//       <h1>A collector‘s item full of emotion</h1> 
+//       <a href="">Read more</a>
+//     </div>
+//   </div>
+// </div>`
+
+stage.innerHTML = `
+    <div id="stage-container">
+      <div id="inner-stage-con">
+        <div id="stage-img-con">
+          <video   playsinline loop muted autoplay>
+             <source src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/hoj/hoj-01-stage-hd.mp4">
+          </video>
+        </div>
+        <div id="stage-content-con"> 
+          <div id="stage-content-p">Inside Neue Klasse</div>
+          <h1>The Heart of Joy – Redefining driving pleasure</h1> 
+          <a href="">Read more</a>
+        </div>
+      </div>
+    </div>`
 
 // teaser
 
-teaserOne.innerHTML=`
+teaserOne.innerHTML = `
 <div id="teaser-inner">
   <div id="teaser-con">
     <div id="teaser-content-con">
@@ -197,7 +213,7 @@ teaserOne.innerHTML=`
 
 // scroller
 
-scroller.innerHTML=`
+scroller.innerHTML = `
 <h2>Stay up to date with BMW.</h2>
 <div id="scroller-con">
   <div id="scroller-inner-con">
@@ -229,17 +245,17 @@ scroller.innerHTML=`
   </div>
 </div>`
 
-const scrollItem=document.querySelector("#scroller-item-1")
-const scrollItem2=document.querySelector("#scroller-item-2")
+const scrollItem = document.querySelector("#scroller-item-1")
+const scrollItem2 = document.querySelector("#scroller-item-2")
 
 scroll()
 scrollTab()
-function scroll(){
-  let item=[`<span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span> All news`,"The first BMW fragrances","Sheer charging pleasure!","Spotify Playlist","Panoramic iDrive","Holiday Season","Kith for BMW"]
-  for(let i=0;i<item.length;i++){
-    let sItem=document.createElement("div")
+function scroll() {
+  let item = [`<span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span> All news`, "The first BMW fragrances", "Sheer charging pleasure!", "Spotify Playlist", "Panoramic iDrive", "Holiday Season", "Kith for BMW"]
+  for (let i = 0; i < item.length; i++) {
+    let sItem = document.createElement("div")
     sItem.classList.add("s-item")
-    sItem.innerHTML=`
+    sItem.innerHTML = `
     <div class="item-img-con">
       <div class="item-img">
         <video id="item-video" playsinline loop muted autoplay>
@@ -257,14 +273,14 @@ function scroll(){
   }
 }
 
-function scrollTab(){
-  let item=[`<span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span> All news`,"The first BMW fragrances","Sheer charging pleasure!","Spotify Playlist","Panoramic iDrive","Holiday Season","Kith for BMW"]
+function scrollTab() {
+  let item = [`<span><svg class="pw-a-icon-link__icon"><use xlink:href="#icon-link-arrow"></use></svg></span> All news`, "The first BMW fragrances", "Sheer charging pleasure!", "Spotify Playlist", "Panoramic iDrive", "Holiday Season", "Kith for BMW"]
 
-  let img=["https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-26-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-24-media-high.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-20-media.jpg?imwidth=768","https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-17-media-portrait.jpg?imwidth=768"]
-  for(let i=0;i<img.length;i++){
-    let sItem2=document.createElement("div")
+  let img = ["https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-26-media-high.jpg?imwidth=768", "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-24-media-high.jpg?imwidth=768", "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-20-media.jpg?imwidth=768", "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/notes/n-17-media-portrait.jpg?imwidth=768"]
+  for (let i = 0; i < img.length; i++) {
+    let sItem2 = document.createElement("div")
     sItem2.classList.add("s-item2")
-    sItem2.innerHTML=`
+    sItem2.innerHTML = `
     <div class="item-img-con" id="item-img-con-id">
       <div class="item-img">
         <picture id="item-video" playsinline loop muted autoplay>
@@ -274,16 +290,16 @@ function scrollTab(){
     </div>
     <div class="item-text">
       <div class="item-text-inner">
-        ${item[i+1]}
+        ${item[i + 1]}
       </div>
     </div>
     `
-    sItem2.querySelector("img").src=img[i]
+    sItem2.querySelector("img").src = img[i]
     scrollItem2.appendChild(sItem2)
-}
+  }
 }
 
-expert.innerHTML=`
+expert.innerHTML = `
 <div id="expert-con">
  <div id="expert-inner">
   <div id="expert-media">
@@ -305,7 +321,7 @@ expert.innerHTML=`
 </div>
 `
 
-highLight.innerHTML=`
+highLight.innerHTML = `
 <div id="highlight-con">
  <div id="highlight-content">
    <h2>The BMW Podcast: Changing Lanes</h2>
