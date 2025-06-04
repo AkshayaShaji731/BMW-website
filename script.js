@@ -131,14 +131,14 @@ const highLight = document.getElementById("highlight")
 // <div id="stage-container">
 //   <div id="inner-stage-con">
 //     <div id="stage-img-con">
-  //   <picture>
-  //     <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
-  //     <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
-  //     <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
-  //     <source media="(min-width:568px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
-  //     <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360%20360w">
-  //     <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
-  //  </picture>
+//   <picture>
+//     <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1280">
+//     <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=1024">
+//     <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=768">
+//     <source media="(min-width:568px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=568">
+//     <source media="(min-width:360px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg?imwidth=360%20360w">
+//     <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/speedtop/speedtop-00-teaser-hd.jpg" alt="Car-img" ;">
+//  </picture>
 //     </div>
 //     <div id="stage-content-con"> 
 //       <div id="stage-content-p">BMW Concept Speedtop</div>
@@ -188,7 +188,6 @@ teaserOne.innerHTML = `
           <b>BMW Concept Speedtop</b>
           <h3>A collector‘s item full of emotion</h3>
         </div>
-
       </a>
       </div>
          <div id="teaser-content-1">
@@ -324,6 +323,7 @@ expert.innerHTML = `
  </div> 
 </div>
 `
+// highLight
 
 highLight.innerHTML = `
 <div id="highlight-con">
@@ -334,4 +334,100 @@ highLight.innerHTML = `
    </p>
     <a href="">Listen now</a>
  </div>
+ <div id="highlight-main">
+   <div id="highlight-main-inner">
+    <div id="highlist-main-con"></div>
+    <div class="scroll-btn">
+      <button id="s-btn-left" class="s-btn">
+        <svg class="i" aria-hidden="true" focusable="false"><use xlink:href="#icon-chevron-left"></use></svg>
+      </button>
+      <button id="s-btn-right" class="s-btn">
+        <svg class="i" aria-hidden="true" focusable="false"><use xlink:href="#icon-chevron-right"></use></svg>
+      </button>
+     </div>
+   </div>
+ </div>
 </div>`
+
+const highLightMain = document.getElementById("highlist-main-con")
+highLightMed()
+function highLightMed() {
+  let items = [{
+    video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+    span: "GAME CHANGER",
+    h3: "An audio series about those who change the world around them"
+  },
+  {
+    video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/superhero/sup-00-teaser-high.mp4",
+    span: "BMW and superheroes",
+    h3: "Freeing Gaia Podcast",
+  },
+  {
+    video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/electric-future/emyths/em-00-teaser-high.mp4",
+    span: "ELECTRIC MYTHS",
+    h3: "A video podcast about electric driving myths"
+  },
+  {
+    video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/fat/fat-00-teaser-high.mp4",
+    span: "The future according to…",
+    h3: "Audio column"
+  },
+  {
+    video: "https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/podcast/changing-lanes/dee-00-teaser-high.mp4",
+    span: "DEE MY GUEST",
+    h3: "An audio series about humans and machines"
+  },
+  {
+    video: "https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/podcast/changing-lanes/fwd-00-teaser-high.mp4",
+    span: "THIS IS FORWARDISM",
+    h3: "An audio series with the shapers of our future"
+  },
+  {
+    video: "https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/innovation/hypnopolis-podcast/bmw-podcast-hypnopolis-00-teaser-high-00.mp4",
+    span: "",
+    h3: "Sci-Fi Thriller for your ears"
+  },
+  {
+    video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+    span: "",
+    h3: "Exclusive BMW insights"
+  },
+  {
+    video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+    span: "BMW and superheroes",
+    h3: "HYPNOPOLIS 2: UTOPIA IN PROGRESS"
+  }
+  ]
+
+  for (let i = 0; i < items.length; i++) {
+    let highlight = document.createElement("div")
+    highlight.classList.add("highlight-inner-con")
+    highlight.innerHTML = `
+     <div class="highlight-media">
+      <video playsinline loop muted autoplay>
+       <source class="video" src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4">
+      </video>
+     </div>
+     <div class="highlight-text">
+       <span class="high-span">${items[i].span}</span>
+       <h3 class="high-h3">${items[i].h3}</h3>
+     </div>
+    `
+    highlight.querySelector(".video").src=items[i].video
+    
+    highLightMain.appendChild(highlight)
+  }
+}
+
+let slideIndex = 0;
+slideHighLight()
+function slideHighLight() {
+  let slides = document.getElementsByClassName("highlight-inner-con");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(slideHighLight,5000);
+}
