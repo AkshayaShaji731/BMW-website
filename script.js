@@ -729,8 +729,8 @@ function footerDivCreation() {
 
   const liContent = [
     ["Home", "BMW in your country", "BMW Group Careers", "EU Detergents Regulation", "REACH Regulation", "Compatibility Check", "Accessories Upadate", "Connected Test Vehicle", "Service Page Charging Products", "Cooperation Test Car", "EU Battery Regulation"],
-    ["BMW M", "BMW M Motorspot", "BMW Galfsport", "BMW M Driving Experience", "BMW Welt", "BMW Group Classic", "BMW Corpoate/Direct Sales", "BMW Group", "BMW Group Culture Engagement", "BMW ConnectedDrive Upgrades"],
-    ["About.com", "Contact", "Cookies", "Imprint", "Legal Notice/Data protection"],
+    ["BMW M", "BMW M Motorspot", "BMW Galfsport", "BMW M Driving Experience", "BMW Welt", "BMW Group Classic", "BMW Corpoate/Direct Sales", "BMW Group", "BMW Group Cultural Engagement", "BMW ConnectedDrive Upgrades"],
+    ["About BMW.com", "Contact", "Cookies", "Imprint", "Legal Notice / Data protection"],
     ["Facebook", "X", "Instagram", "YouTube"]
   ]
   h5.forEach((ele, index) => {
