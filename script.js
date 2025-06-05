@@ -1,6 +1,7 @@
 const root = document.getElementById("root")
 const header = document.getElementById("header")
 const main = document.getElementById("main")
+const footer = document.getElementById("footer")
 
 headerScroll()
 
@@ -602,7 +603,7 @@ function teaserGenerater() {
           contentCon.style.flexDirection = "column";
         }
       }
-    
+
       const mediaQuery = window.matchMedia("(min-width: 768px)");
 
       mediaQuery.addEventListener("change", updateFlexDirection);
@@ -615,12 +616,12 @@ function teaserGenerater() {
       if (row.id === "three") {
         function updateFlexDirection(e) {
           if (e.matches) {
-             content.style.width = "33%"
+            content.style.width = "33%"
           } else {
-             content.style.width = "100%"
+            content.style.width = "100%"
           }
         }
-      
+
         const mediaQuery = window.matchMedia("(min-width: 768px)");
 
         mediaQuery.addEventListener("change", updateFlexDirection);
@@ -636,20 +637,20 @@ function teaserGenerater() {
       if (row.id == "one") {
         function updateFlexDirection(e) {
           if (e.matches) {
-            imgDiv.style.aspectRatio="16/9"
+            imgDiv.style.aspectRatio = "16/9"
           } else {
-           imgDiv.style.aspectRatio="1/1"
+            imgDiv.style.aspectRatio = "1/1"
           }
         }
-      
+
         const mediaQuery = window.matchMedia("(min-width: 768px)");
-  
+
         mediaQuery.addEventListener("change", updateFlexDirection);
         updateFlexDirection(mediaQuery);
       }
-      
-      if(row.id=="three"){
-        imgDiv.style.aspectRatio="16/9"
+
+      if (row.id == "three") {
+        imgDiv.style.aspectRatio = "16/9"
       }
 
       const imgInner = document.createElement("div");
@@ -697,4 +698,61 @@ function teaserGenerater() {
 
   teaserInner.appendChild(teaserCon);
   teaserSec.appendChild(teaserInner);
+}
+
+footer.innerHTML = `
+<div id="teaser-inner" class="teaser-inner">
+ <nav id="footer-nav"></nav>
+ 
+</div>
+`
+const footerCon = document.querySelector(".teaser-inner")
+const footerNav = document.getElementById("footer-nav")
+footerNavFun()
+function footerNavFun() {
+  let aContent = ["English", "Deutsch", "Italiano", "Français", "Español", "日本語"]
+  aContent.forEach(lang => {
+    let aTag = document.createElement("a")
+    aTag.href = "";
+    aTag.innerText = lang
+    footerNav.appendChild(aTag)
+
+  });
+}
+
+footerDivCreation()
+function footerDivCreation() {
+  let divFoot = document.createElement("div")
+  divFoot.id = "footer-div"
+  const footerDiv = document.getElementById("footer-div")
+  let h5 = ["Quick Links", "More BMW Websites", "BMW.com", "Visit us on"]
+
+  const liContent = [
+    ["Home", "BMW in your country", "BMW Group Careers", "EU Detergents Regulation", "REACH Regulation", "Compatibility Check", "Accessories Upadate", "Connected Test Vehicle", "Service Page Charging Products", "Cooperation Test Car", "EU Battery Regulation"],
+    ["BMW M", "BMW M Motorspot", "BMW Galfsport", "BMW M Driving Experience", "BMW Welt", "BMW Group Classic", "BMW Corpoate/Direct Sales", "BMW Group", "BMW Group Culture Engagement", "BMW ConnectedDrive Upgrades"],
+    ["About.com", "Contact", "Cookies", "Imprint", "Legal Notice/Data protection"],
+    ["Facebook", "X", "Instagram", "YouTube"]
+  ]
+  h5.forEach((ele, index) => {
+    let h5Con = document.createElement("h5")
+    h5Con.innerText = ele
+    let ulCon = document.createElement("ul")
+    ulCon.id = "ul-con"
+    divFoot.appendChild(h5Con)
+    divFoot.appendChild(ulCon)
+    footerCon.appendChild(divFoot)
+    // const footerUl = document.getElementById("ul-con")
+    footerli(ulCon, liContent[index])
+  })
+  let divEnd = document.createElement("div")
+  divEnd.innerText = "© BMW AG 2025"
+  divEnd.id="div-end"
+  divFoot.appendChild(divEnd)
+}
+function footerli(footerUl, liContent) {
+  liContent.forEach(e => {
+    const list = document.createElement("li");
+    list.innerText = e;
+    footerUl.appendChild(list);
+  });
 }
