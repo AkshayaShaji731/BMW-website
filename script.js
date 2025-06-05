@@ -118,15 +118,16 @@ main.innerHTML = `
 <section id="expert"></section>
 <div class=spacer-2></div>
 <section id="highlight"></section>
-<section id="model"></section>`
+<section id="model"></section>
+<section id="teaser-2"></div>`
 
 const stage = document.getElementById('stage')
 const teaserOne = document.getElementById("teaser-1")
 const scroller = document.getElementById("scroller")
 const expert = document.getElementById("expert")
 const highLight = document.getElementById("highlight")
-const model=document.getElementById("model")
-
+const model = document.getElementById("model")
+const teaserSec = document.getElementById("teaser-2")
 // stage section
 
 stage.innerHTML = `
@@ -394,8 +395,8 @@ function highLightMed() {
        <h3 class="high-h3">${items[i].h3}</h3>
      </div>
     `
-    highlight.querySelector(".video").src=items[i].video
-    
+    highlight.querySelector(".video").src = items[i].video
+
     highLightMain.appendChild(highlight)
   }
 }
@@ -410,12 +411,12 @@ function slideHighLight() {
   slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1 }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(slideHighLight,5000);
+  setTimeout(slideHighLight, 5000);
 }
 
 // model
 
-model.innerHTML=`
+model.innerHTML = `
   <div id="model-con">
     <h2>All BMW Models</h2>
     <a href="">
@@ -423,3 +424,391 @@ model.innerHTML=`
       Find your BMW
     </a>
   </div>`
+
+  // teaserSec
+
+// teaserSec.innerHTML = `
+//  <div id="teaser-inner">
+//   <div id="teaser-con">
+//     <div id="teaser-content-con">
+//       <div id="teaser-content-1">
+//       <a href="">
+//         <div id="con-1-img" >
+//           <div id="con-img-inner">
+//             <video playsinline loop muted autoplay>
+//               <source src="http://bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4">
+//             </video>
+//           </div>
+//         </div>
+//         <div id="con1-text">
+//           <b>BMW Explained</b>
+//           <h3>How BMW shaped the sports sedan</h3>
+//         </div>
+//       </a>
+//       </div>
+//       <div id="teaser-content-1">
+//       <a href="">
+//         <div id="con-1-img" >
+//           <div id="con-img-inner">
+//            <picture>
+//             <source media="(min-width:1440px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1440"> 
+//             <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1024">
+//             <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=768">
+//             <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/bmwapp-wallpaper/bawp-00-teaser-hd.jpg" alt="teser-img">
+//            </picture>
+//           </div>
+//         </div>
+//         <div id="con1-text">
+//           <h3>BMW Wallpapers</h3>
+//         </div>  
+//       </a>
+//       </div>
+//     </div>
+//   </div>
+
+// </div>
+// `
+
+teaserGenerater()
+// function teaserGenerater() {
+  // let teaser = [
+  //   [
+  //     {
+  //     video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //     span: "BMW Explained",
+  //     h3: "How BMW shaped the sports sedan"
+  //     },
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: "",
+  //       h3: "BMW Wallpapers"
+  //     }
+  //   ],
+  //   [
+  //     {
+  //       video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: "BMW explained",
+  //       h3: "Milestone in BMW lighting"
+  //     }
+      
+  //   ],
+  //   [
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: "Technology",
+  //       h3: " ​Technological highlights: 15 exceptional BMW engines."
+  //     },
+  //     {
+  //       video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: "Technology",
+  //       h3: " From April Fool’s jokes to reality: BMW innovations ahead of their time. "
+  //     },
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: "Automobile History ",
+  //       h3: "The seven generations of the BMW 3 Series "
+  //     }
+  //   ],
+  //   [
+  //     {
+  //     img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //     span: "BMW Explained",
+  //     h3: "The joy of colour"
+  //     },
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: " BMW history ",
+  //       h3: " Do you know these fascinating BMW facts? "
+  //     }
+  //   ],
+  //   [
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: " Quiz ",
+  //       h3: " Can you identify all the BMW models? "
+  //     }
+      
+  //   ],
+  //   [
+  //     {
+  //       video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: " BMW iDrive ",
+  //       h3: " An Evolution of Control and Intelligent Connectivity "
+  //     },
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: " Smart Assistance ",
+  //       h3: "The BMW Driving Companionship"
+  //     },
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: "Over-the-Air Updates",
+  //       h3: " The Joy of the Ever-Evolving "
+  //     }
+  //   ],
+  //   [
+  //     {
+  //     img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //     span: " Festive season ",
+  //     h3: " Two generations, one shared driving pleasure "
+  //     },
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: " BMW Skytop ",
+  //       h3: " The magic of exclusive moments "
+  //     }
+  //   ],
+  //   [
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: " 25-year anniversary ",
+  //       h3: " The BMW X5 through the ages "
+  //     }
+      
+  //   ],
+  //   [
+  //     {
+  //       video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: "GAME CHANGER",
+  //       h3: "An audio series about those who change the world around them "
+  //     },
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: " Erlkönig – German prototype cars ",
+  //       h3: " The art of deception "
+  //     },
+  //     {
+  //       img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+  //       span: " Hydrogen ",
+  //       h3: " The BMW journey to the mobility of the future "
+  //     }
+  //   ]
+  // ]
+//   for(let i=0;i<teaser.length;i++){
+//     teaserSec.innerHTML=`
+//     <div id="teaser-inner">
+//      <div id="teaser-con">
+//        <div id="teaser-content-con">
+//          <div id="teaser-content-1">
+//               <a href="">
+//                 <div id="con-1-img" >
+//                   <div id="con-img-inner">
+//                    </div>
+//                 </div>
+//                 <div id="con1-text">
+//                   <h3>BMW Wallpapers</h3>
+//                 </div>  
+//               </a>
+//            </div>
+//        </div>
+//      </div>
+//     </div> 
+//     `
+//     const teaserCon=document.getElementById("con-img-inner") 
+//     console.log(teaserCon.innerHTML)
+//     let element=teaser[i]
+//     for(let j=0;j<element.length;j++){
+//       // console.log(element[j].video)
+//       if(element[j].video==undefined){
+//         teaserCon.innerHTML=`
+//           <picture>
+//            <source media="(min-width:1440px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1440"> 
+//            <source media="(min-width:1024px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=1024">
+//            <source media="(min-width:768px)" srcset="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/bmw-intelligence/bi-00-teaser-hd.jpg?imwidth=768">
+//            <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/bmwapp-wallpaper/bawp-00-teaser-hd.jpg" alt="teser-img">
+//           </picture>
+//           `
+//       }
+//       else{
+//         teaserCon.innerHTML=`
+//           <video playsinline loop muted autoplay>
+//             <source src="http://bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4">
+//           </video>
+//         `
+       
+//       }
+//     }
+//     console.log(teaserCon.innerHTML)
+//   }
+// }
+
+function teaserGenerater() {
+  let teaser = [
+    [
+      {
+      video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4",
+      span: "BMW Explained",
+      h3: "How BMW shaped the sports sedan"
+      },
+      {
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/bmwapp-wallpaper/bawp-00-teaser-hd.jpg",
+        span: "",
+        h3: "BMW Wallpapers"
+      }
+    ],
+    [
+      {
+        video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/light/light-01-stage-hd.mp4",
+        span: "BMW explained",
+        h3: "Milestone in BMW lighting"
+      }
+      
+    ],
+    [
+      {
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Innovation/engine/eng-00-teaser-hd1.jpg",
+        span: "Technology",
+        h3: " ​Technological highlights: 15 exceptional BMW engines."
+      },
+      {
+        video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/april_fools_day/af-00-teaser-hd.mp4",
+        span: "Technology",
+        h3: " From April Fool’s jokes to reality: BMW innovations ahead of their time. "
+      },
+      // {
+      //   img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/3er-bmw/181010_3er/3er-00-teaser-hd.jpg",
+      //   span: "Automobile History ",
+      //   h3: "The seven generations of the BMW 3 Series "
+      // }
+    ],
+    [
+      {
+      img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/colors/cl-00-teaser-hd.jpg",
+      span: "BMW Explained",
+      h3: "The joy of colour"
+      },
+      {
+        img: 	"https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/skytop/st-00-teaser-hd.jpg",
+        span: " BMW history ",
+        h3: " Do you know these fascinating BMW facts? "
+      }
+    ],
+    [
+      {
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/Silhouettenquiz/sq-00-teaser-hd.jpg",
+        span: " Quiz ",
+        h3: " Can you identify all the BMW models? "
+      }
+      
+    ],
+    [
+      {
+        video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/i-drive/id-00-teaser-hd.mp4",
+        span: " BMW iDrive ",
+        h3: " An Evolution of Control and Intelligent Connectivity "
+      },
+      {
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/Smart-Assistance/sa-00-teaser-hd.jpg",
+        span: " Smart Assistance ",
+        h3: "The BMW Driving Companionship"
+      },
+      // {
+      //   img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/over-the-air/ota-00-teaser-hd.jpg",
+      //   span: "Over-the-Air Updates",
+      //   h3: " The Joy of the Ever-Evolving "
+      // }
+    ],
+    [
+      {
+      img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/xmas24/xmas24-00-teaser-hd.jpg",
+      span: " Festive season ",
+      h3: " Two generations, one shared driving pleasure "
+      },
+      {
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/skytop/st-00-teaser-hd.jpg",
+        span: " BMW Skytop ",
+        h3: " The magic of exclusive moments "
+      }
+    ],
+    [
+      {
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/25x5/25x5-00-teaser-hd.jpg",
+        span: " 25-year anniversary ",
+        h3: " The BMW X5 through the ages "
+      }
+      
+    ],
+    [
+      {
+        video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
+        span: "GAME CHANGER",
+        h3: "An audio series about those who change the world around them "
+      },
+      {
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/bmw-erlkoenige/bmw-erlkoenige-00-teaser-hd.jpg",
+        span: " Erlkönig – German prototype cars ",
+        h3: " The art of deception "
+      },
+      // {
+      //   img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/electric-future/hydrogen/hy-00-teaser-hd.jpg",
+      //   span: " Hydrogen ",
+      //   h3: " The BMW journey to the mobility of the future "
+      // }
+    ]
+  ]
+  const teaserInner = document.createElement("div");
+  teaserInner.id = "teaser-inner";
+
+  const teaserCon = document.createElement("div");
+  teaserCon.id = "teaser-con";
+
+  teaser.forEach(row => {
+    const contentCon = document.createElement("div");
+    contentCon.id = "teaser-content-con";
+
+    row.forEach(item => {
+      const content = document.createElement("div");
+      content.id = "teaser-content-1";
+
+      const link = document.createElement("a");
+      link.href = "";
+
+      const imgDiv = document.createElement("div");
+      imgDiv.id = "con-1-img";
+
+      const imgInner = document.createElement("div");
+      imgInner.id = "con-img-inner";
+
+      if (item.video) {
+        imgInner.innerHTML = `
+          <video playsinline loop muted autoplay>
+            <source src="${item.video}" type="video/mp4">
+          </video>`;
+      } else if (item.img) {
+        imgInner.innerHTML = `
+          <picture>
+            <source media="(min-width:1440px)" srcset="${item.img}?imwidth=1440"> 
+            <source media="(min-width:1024px)" srcset="${item.img}?imwidth=1024">
+            <source media="(min-width:768px)" srcset="${item.img}?imwidth=768">
+            <img src="${item.img}" alt="teaser-img">
+          </picture>`;
+      }
+
+      imgDiv.appendChild(imgInner);
+
+      const textDiv = document.createElement("div");
+      textDiv.id = "con1-text";
+
+      if (item.span) {
+        const span = document.createElement("b");
+        span.textContent = item.span;
+        textDiv.appendChild(span);
+      }
+
+      const h3 = document.createElement("h3");
+      h3.textContent = item.h3;
+      textDiv.appendChild(h3);
+
+      link.appendChild(imgDiv);
+      link.appendChild(textDiv);
+
+      content.appendChild(link);
+      contentCon.appendChild(content);
+    });
+
+    teaserCon.appendChild(contentCon);
+  });
+
+  teaserInner.appendChild(teaserCon);
+  teaserSec.appendChild(teaserInner);
+}
