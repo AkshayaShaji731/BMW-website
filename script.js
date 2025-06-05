@@ -594,15 +594,38 @@ function teaserGenerater() {
   teaser.forEach(row => {
     const contentCon = document.createElement("div");
     contentCon.id = "teaser-content-con";
-    if (row.id == "three") {
-      contentCon.style.flexDirection = "column"
+    if (row.id === "three") {
+      function updateFlexDirection(e) {
+        if (e.matches) {
+          contentCon.style.flexDirection = "row";
+        } else {
+          contentCon.style.flexDirection = "column";
+        }
+      }
+    
+      const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+      mediaQuery.addEventListener("change", updateFlexDirection);
+      updateFlexDirection(mediaQuery);
     }
     let arr = row.value
     arr.forEach(item => {
       const content = document.createElement("div");
       content.id = "teaser-content-1";
-      if (row.id == "three") {
-        content.style.width = "100%"
+      if (row.id === "three") {
+        function updateFlexDirection(e) {
+          if (e.matches) {
+             content.style.width = "33%"
+          } else {
+             content.style.width = "100%"
+          }
+        }
+      
+        const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+        mediaQuery.addEventListener("change", updateFlexDirection);
+
+        updateFlexDirection(mediaQuery);
       }
 
       const link = document.createElement("a");
@@ -611,8 +634,20 @@ function teaserGenerater() {
       const imgDiv = document.createElement("div");
       imgDiv.id = "con-1-img";
       if (row.id == "one") {
-        imgDiv.style.aspectRatio = "1/1"
+        function updateFlexDirection(e) {
+          if (e.matches) {
+            imgDiv.style.aspectRatio="16/9"
+          } else {
+           imgDiv.style.aspectRatio="1/1"
+          }
+        }
+      
+        const mediaQuery = window.matchMedia("(min-width: 768px)");
+  
+        mediaQuery.addEventListener("change", updateFlexDirection);
+        updateFlexDirection(mediaQuery);
       }
+      
       if(row.id=="three"){
         imgDiv.style.aspectRatio="16/9"
       }
