@@ -4,7 +4,7 @@ const main = document.getElementById("main")
 
 headerScroll()
 
-function headerScroll(){
+function headerScroll() {
   let lastScrollTop = 0;
   const header = document.querySelector("header");
 
@@ -12,14 +12,12 @@ function headerScroll(){
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-      // Scrolling down
-      header.style.top = "-100px"; // hides the header
+      header.style.top = "-100px";
     } else {
-      // Scrolling up
-      header.style.top = "0"; // shows the header
+      header.style.top = "0";
     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 }
 
@@ -446,7 +444,7 @@ model.innerHTML = `
     </a>
   </div>`
 
-  // teaserSec
+// teaserSec
 
 
 
@@ -454,28 +452,35 @@ teaserGenerater()
 
 function teaserGenerater() {
   let teaser = [
-    [
-      {
-      video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4",
-      span: "BMW Explained",
-      h3: "How BMW shaped the sports sedan"
-      },
-      {
-        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/bmwapp-wallpaper/bawp-00-teaser-hd.jpg",
-        span: "",
-        h3: "BMW Wallpapers"
-      }
-    ],
-    [
-      {
-        video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/light/light-01-stage-hd.mp4",
-        span: "BMW explained",
-        h3: "Milestone in BMW lighting"
-      }
-      
-    ],
-    [
-      {
+    {
+      id: "two",
+      value: [
+        {
+          video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/sport-sedan/ss-00-teaser-high.mp4",
+          span: "BMW Explained",
+          h3: "How BMW shaped the sports sedan"
+        },
+        {
+          img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/bmwapp-wallpaper/bawp-00-teaser-hd.jpg",
+          span: "",
+          h3: "BMW Wallpapers"
+        }
+      ]
+    }
+    ,
+    {
+      id: "one",
+      value: [
+        {
+          video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/light/light-01-stage-hd.mp4",
+          span: "BMW explained",
+          h3: "Milestones in BMW lighting design"
+        }
+      ]
+    },
+    {
+      id: "three",
+      value: [{
         img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Innovation/engine/eng-00-teaser-hd1.jpg",
         span: "Technology",
         h3: " ​Technological highlights: 15 exceptional BMW engines."
@@ -485,35 +490,40 @@ function teaserGenerater() {
         span: "Technology",
         h3: " From April Fool’s jokes to reality: BMW innovations ahead of their time. "
       },
-      // {
-      //   img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/3er-bmw/181010_3er/3er-00-teaser-hd.jpg",
-      //   span: "Automobile History ",
-      //   h3: "The seven generations of the BMW 3 Series "
-      // }
-    ],
-    [
       {
-      img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/colors/cl-00-teaser-hd.jpg",
-      span: "BMW Explained",
-      h3: "The joy of colour"
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/3er-bmw/181010_3er/3er-00-teaser-hd.jpg",
+        span: "Automobile History ",
+        h3: "The seven generations of the BMW 3 Series "
+      }
+      ]
+    },
+    {
+      id: "two",
+      value: [{
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/colors/cl-00-teaser-hd.jpg",
+        span: "BMW Explained",
+        h3: "The joy of colour"
       },
       {
-        img: 	"https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/skytop/st-00-teaser-hd.jpg",
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/skytop/st-00-teaser-hd.jpg",
         span: " BMW history ",
         h3: " Do you know these fascinating BMW facts? "
       }
-    ],
-    [
-      {
-        id:"1",
+      ],
+    },
+    {
+      id: "one",
+      value: [{
+        id: "1",
         img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/Silhouettenquiz/sq-00-teaser-hd.jpg",
         span: " Quiz ",
         h3: " Can you identify all the BMW models? "
       }
-      
-    ],
-    [
-      {
+      ]
+    },
+    {
+      id: "three",
+      value: [{
         video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/i-drive/id-00-teaser-hd.mp4",
         span: " BMW iDrive ",
         h3: " An Evolution of Control and Intelligent Connectivity "
@@ -523,35 +533,41 @@ function teaserGenerater() {
         span: " Smart Assistance ",
         h3: "The BMW Driving Companionship"
       },
-      // {
-      //   img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/over-the-air/ota-00-teaser-hd.jpg",
-      //   span: "Over-the-Air Updates",
-      //   h3: " The Joy of the Ever-Evolving "
-      // }
-    ],
-    [
       {
-      img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/xmas24/xmas24-00-teaser-hd.jpg",
-      span: " Festive season ",
-      h3: " Two generations, one shared driving pleasure "
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/digital-journey/over-the-air/ota-00-teaser-hd.jpg",
+        span: "Over-the-Air Updates",
+        h3: " The Joy of the Ever-Evolving "
+      }
+      ]
+    },
+    {
+      id: "two",
+      value: [{
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/xmas24/xmas24-00-teaser-hd.jpg",
+        span: " Festive season ",
+        h3: " Two generations, one shared driving pleasure "
       },
       {
         img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/skytop/st-00-teaser-hd.jpg",
         span: " BMW Skytop ",
         h3: " The magic of exclusive moments "
       }
-    ],
-    [
-      {
-        id:"1",
+      ]
+    },
+    {
+      id: "one",
+      value: [{
+        id: "1",
         img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/25x5/25x5-00-teaser-hd.jpg",
         span: " 25-year anniversary ",
         h3: " The BMW X5 through the ages "
       }
-      
-    ],
-    [
-      {
+
+      ]
+    },
+    {
+      id: "three",
+      value: [{
         video: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/podcast-teaser/gamechanger/gm-00-teaser-high.mp4",
         span: "GAME CHANGER",
         h3: "An audio series about those who change the world around them "
@@ -561,12 +577,13 @@ function teaserGenerater() {
         span: " Erlkönig – German prototype cars ",
         h3: " The art of deception "
       },
-      // {
-      //   img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/electric-future/hydrogen/hy-00-teaser-hd.jpg",
-      //   span: " Hydrogen ",
-      //   h3: " The BMW journey to the mobility of the future "
-      // }
-    ]
+      {
+        img: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/electric-future/hydrogen/hy-00-teaser-hd.jpg",
+        span: " Hydrogen ",
+        h3: " The BMW journey to the mobility of the future "
+      }
+      ]
+    }
   ]
   const teaserInner = document.createElement("div");
   teaserInner.id = "teaser-inner";
@@ -577,16 +594,28 @@ function teaserGenerater() {
   teaser.forEach(row => {
     const contentCon = document.createElement("div");
     contentCon.id = "teaser-content-con";
-
-    row.forEach(item => {
+    if (row.id == "three") {
+      contentCon.style.flexDirection = "column"
+    }
+    let arr = row.value
+    arr.forEach(item => {
       const content = document.createElement("div");
       content.id = "teaser-content-1";
+      if (row.id == "three") {
+        content.style.width = "100%"
+      }
 
       const link = document.createElement("a");
       link.href = "";
 
       const imgDiv = document.createElement("div");
       imgDiv.id = "con-1-img";
+      if (row.id == "one") {
+        imgDiv.style.aspectRatio = "1/1"
+      }
+      if(row.id=="three"){
+        imgDiv.style.aspectRatio="16/9"
+      }
 
       const imgInner = document.createElement("div");
       imgInner.id = "con-img-inner";
