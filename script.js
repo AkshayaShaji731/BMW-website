@@ -447,8 +447,6 @@ model.innerHTML = `
 
 // teaserSec
 
-
-
 teaserGenerater()
 
 function teaserGenerater() {
@@ -700,6 +698,8 @@ function teaserGenerater() {
   teaserSec.appendChild(teaserInner);
 }
 
+// footer 
+
 footer.innerHTML = `
 <div id="teaser-inner" class="teaser-inner">
  <nav id="footer-nav"></nav>
@@ -722,7 +722,6 @@ function footerNavFun() {
 
 footerDivCreation()
 function footerDivCreation() {
-  let divFoot = document.createElement("div")
   divFoot.id = "footer-div"
   const footerDiv = document.getElementById("footer-div")
   let h5 = ["Quick Links", "More BMW Websites", "BMW.com", "Visit us on"]
@@ -746,7 +745,7 @@ function footerDivCreation() {
   })
   let divEnd = document.createElement("div")
   divEnd.innerText = "© BMW AG 2025"
-  divEnd.id="div-end"
+  divEnd.id = "div-end"
   divFoot.appendChild(divEnd)
 }
 function footerli(footerUl, liContent) {
